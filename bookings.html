@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Bookings</title>
+	<meta name="description" content="Bookings">
+	<meta name="Michael Kemp" content="SitePoint">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Open%20Sans%20Condensed:300' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="bookingslogic.js"></script>
+</head>
+
+<body class="bookings">
+	<script src="logic.js"></script>
+	<!-- Desktop website navigation bar below -->
+	<nav>
+		<!-- Hidden styled checkbox to activate mobile slider -->
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn"> <i class="fa fa-align-justify"></i>
+		</label>
+		<!-- Website logo-->
+		<label class="logo">
+			<img alt="China Delight Logo" src="images/siteLogo.png" />
+		</label>
+		<!-- Main Desktop navigation divider and unordered list-->
+		<div class="container">
+			<ul class="MenuUL">
+				<li><a href="index.html">Homepage</a>
+				</li>
+				<li><a href="about.html">About Us</a>
+				</li>
+				<li><a href="#">Reviews</a>
+				</li>
+				<li class="orderOnlineButtonListItem"><a id="orderOnlineButton" href="#">Order Online
+				<img alt="Nav arrow down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+				<li class="membersPortalButtonListItem"><a id="membersPortalButton" href="#">Members Portal
+				<img alt="Arrow Down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+				<li class="contactMenuButtonListItem"><a id="contactMenuButton" href="#">Contact
+				<img alt="Arrow Down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+			</ul>
+			<!-- Different drop down menus for each category-->
+			<div class="desktopDropdown">
+				<ul>
+					<li><a href="#">Pickup</a>
+					</li>
+					<li><a href="#">Delivery</a>
+					</li>
+					<li><a href="bookings.html">Bookings</a>
+					</li>
+				</ul>
+			</div>
+			<div class="desktopDropdownMembers">
+				<ul>
+					<li><a href="members.html">Login</a>
+					</li>
+					<li><a href="members.html">Portal</a>
+					</li>
+					<li><a href="#">Deals</a>
+					</li>
+					<li><a href="#">Custom Menu</a>
+					</li>
+					<li><a href="#">Mailing List</a>
+					</li>
+				</ul>
+			</div>
+			<div class="desktopDropdownContact">
+				<ul>
+					<li><a href="contact.html">Contact Information</a>
+					</li>
+					<li><a href="#">Location</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Mobile Menu's display:none by default. CSS activated on page resize -->
+		<div class="orderMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="orderMenu">
+				<li><a href="#">Pickup</a>
+				</li>
+				<li><a href="#">Delivery</a>
+				</li>
+				<li><a href="bookings.html">Bookings</a>
+				</li>
+			</ul>
+		</div>
+		<div class="contactMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="contactMenu">
+				<li><a href="contact.html">Contact Information</a>
+				</li>
+				<li><a href="#">Location</a>
+				</li>
+			</ul>
+		</div>
+		<div class="membersMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="membersMenu">
+				<li><a href="members.html">Login</a>
+				</li>
+				<li><a href="members.html">Portal</a>
+				</li>
+				<li><a href="#">Deals</a>
+				</li>
+				<li><a href="#">Custom Menu</a>
+				</li>
+				<li><a href="#">Mailing List</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Icons for uber eats, translation and night mode-->
+	<div class="miniIcons"> <img alt="Uber Eats Icon" class="uberEats" src="images/uberEats.png"> <img alt="Translation Icon" class="translation" src="images/translation.png"> <img alt="Dark Mode Icon" class="darkMode" src="images/contrast.png"> </div>
+	<h1 class="aboutUs">Make a Booking</h1>
+	<!--Form to fill in to book a table or an event.-->
+	<div id="bookingFormContainer">
+		<form id='saveForm'>
+			<div> Type Of Booking
+				<br>
+				<!-- Different booking options available in drop down form element-->
+				<select id='bookingTypeSelection'>
+					<option disabled selected value> -- select an option -- </option>
+					<option value='1'>Dinner Reservation</option>
+					<option value='2'>Bring Your Own Drinks</option>
+					<option value='3'>Function</option>
+					<option value='4'>Other</option>
+				</select>
+				<br> </div>
+			<!-- Hidden by default unless selected other option as booking-->
+			<div id="otherBooking"> Other Booking Type:
+				<br>
+				<input class='textInput' type='text'>
+				<br> </div> Name:
+			<br>
+			<input class='textInput' type='text'>
+			<br> Email:
+			<br>
+			<input class='textInput' type='text'>
+			<br> Phone Number:
+			<br>
+			<input class='textInput' type='text'>
+			<br>
+			<label for="quantity">Number Of Guests (Can seat up to 15):</label>
+			<br>
+			<input type="number" id="quantity" name="quantity" min="1" max="15">
+			<br> Date:
+			<br>
+			<input class="date" id="datepicker" value="2021-04-01">
+			<br>
+			<div id='timeslotContainer'> Available Time Slots:
+				<br>
+				<!-- Time slots are also hidden by default until date picked-->
+				<select>
+					<option disabled selected value> -- select an option -- </option>
+					<option>5:00pm</option>
+					<option>5:15pm</option>
+					<option>5:30pm</option>
+					<option>5:45pm</option>
+				</select>
+				<br> </div>
+			<br>
+			<!-- Submit this form-->
+			<input id='saveButton' type='submit' value='SUBMIT'> </form>
+	</div>
+</body>
+
+</html>

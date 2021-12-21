@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Welcome To China Delight</title>
+	<meta name="description" content="China Delight">
+	<meta name="Michael Kemp" content="SitePoint">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css" />
+	<link href='https://fonts.googleapis.com/css?family=Open%20Sans%20Condensed:300' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body class="homepage">
+	<script src="logic.js"></script>
+	<!-- Desktop website navigation bar below -->
+	<nav>
+		<!-- Hidden styled checkbox to activate mobile slider -->
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn"> <i class="fa fa-align-justify"></i>
+		</label>
+		<!-- Website logo-->
+		<label class="logo">
+			<img alt="China Delight Logo" src="images/siteLogo.png" />
+		</label>
+		<!-- Main Desktop navigation divider and unordered list-->
+		<div class="container">
+			<ul class="MenuUL">
+				<li><a href="index.html">Homepage</a>
+				</li>
+				<li><a href="about.html">About Us</a>
+				</li>
+				<li><a href="#">Reviews</a>
+				</li>
+				<li class="orderOnlineButtonListItem"><a id="orderOnlineButton" href="#">Order Online
+				<img alt="Nav arrow down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+				<li class="membersPortalButtonListItem"><a id="membersPortalButton" href="#">Members Portal
+				<img alt="Arrow Down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+				<li class="contactMenuButtonListItem"><a id="contactMenuButton" href="#">Contact
+				<img alt="Arrow Down" class="navArrowDown" src="images/arrow-down.png"></a>
+				</li>
+			</ul>
+			<!-- Different drop down menus for each category-->
+			<div class="desktopDropdown">
+				<ul>
+					<li><a href="#">Pickup</a>
+					</li>
+					<li><a href="#">Delivery</a>
+					</li>
+					<li><a href="bookings.html">Bookings</a>
+					</li>
+				</ul>
+			</div>
+			<div class="desktopDropdownMembers">
+				<ul>
+					<li><a href="members.html">Login</a>
+					</li>
+					<li><a href="members.html">Portal</a>
+					</li>
+					<li><a href="#">Deals</a>
+					</li>
+					<li><a href="#">Custom Menu</a>
+					</li>
+					<li><a href="#">Mailing List</a>
+					</li>
+				</ul>
+			</div>
+			<div class="desktopDropdownContact">
+				<ul>
+					<li><a href="contact.html">Contact Information</a>
+					</li>
+					<li><a href="#">Location</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Mobile Menu's display:none by default. CSS activated on page resize -->
+		<div class="orderMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="orderMenu">
+				<li><a href="#">Pickup</a>
+				</li>
+				<li><a href="#">Delivery</a>
+				</li>
+				<li><a href="bookings.html">Bookings</a>
+				</li>
+			</ul>
+		</div>
+		<div class="contactMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="contactMenu">
+				<li><a href="contact.html">Contact Information</a>
+				</li>
+				<li><a href="#">Location</a>
+				</li>
+			</ul>
+		</div>
+		<div class="membersMenuContainer">
+			<img alt="Back button Mobile" class="backButtonMobile" src="images/BackMenu.png">
+			<ul class="membersMenu">
+				<li><a href="members.html">Login</a>
+				</li>
+				<li><a href="members.html">Portal</a>
+				</li>
+				<li><a href="#">Deals</a>
+				</li>
+				<li><a href="#">Custom Menu</a>
+				</li>
+				<li><a href="#">Mailing List</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Icons for uber eats, translation and night mode-->
+	<div class="miniIcons">
+		<img alt="Uber Eats Icon" class="uberEats" src="images/uberEats.png">
+		<img alt="Translation Icon" class="translation" src="images/translation.png">
+		<img alt="Dark Mode Icon" class="darkMode" src="images/contrast.png">
+	</div>
+	<!-- Image Carousel with custom next and prev arrows.-->
+	<script src="slick-master/slick/slick.js"></script>
+	<script src="myHomeSlick.js"></script>
+	<div class='mySlick'>
+		<div class='single-item'>
+			<div>
+				<img alt="Food Images Carousel" class="carouselImages" src="images/homeImage.png" />
+			</div>
+			<div>
+				<img alt="Food Images Carousel" class="carouselImages" src="images/homeImage.png" />
+			</div>
+		</div>
+		<!-- <img class="carousel-nav carousel-prev" src="images/leftArrow.png"/> -->
+		<!-- <img class="slick-next slick-arrow" src="images/rightArrow.png"/> -->
+	</div>
+	<!-- Page welcome header-->
+	<div class="welcomeHomeDivider">
+		<h1 class="welcomeHome">Welcome to China Delight !</h1>
+		<button class="homeOrderNowButton"></button>
+	</div>
+	<!-- styled 4 image gallery on the home page. -->
+	<div id="homeGallery">
+		<img alt="food image 1" src="images/rectangle_4.png" />
+		<img alt="food image 2" src="images/rectangle_5.png" />
+		<img alt="food image 3" src="images/rectangle_6.png" />
+		<img alt="food image 4" src="images/rectangle_7.png" />
+	</div>
+</body>
+
+</html>

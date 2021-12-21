@@ -1,0 +1,636 @@
+/*China Delight Redesign CSS - Michael Kemp. */
+
+* {
+	padding: 0;
+	margin: 0;
+	/*Remove bullet points and link styling for ul page menu.*/
+	text-decoration: none;
+	list-style: none;
+	/* Account for border and padding values specified.*/
+	box-sizing: border-box;
+	font-family: "Open Sans Condensed";
+}
+
+html {
+	/*Brick wall linear gradient background image.*/
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), url("images/home1.png");
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1 {
+	/*48 pt 63.751067px or3.18755335vw */
+	/*font-size: 3.18755335vw;*/
+	/*Centrally aligned and styled h1 header tag*/
+	font-size: 48pt;
+	text-align: center;
+}
+
+h4{
+	font-size: 20pt;
+}
+
+
+h6 {
+	/*Styling for the h6 header. */
+	font-size: 16pt;
+	text-align: center;
+}
+
+nav {
+	font-weight: 400;
+	/*height of line of text should be full nav bar.*/
+	line-height: 100%;
+}
+
+nav {
+	/*This height is set at 80px static.*/
+	height: 80px;
+	/*Desktop nav bar width should be full screen width.*/
+	width: 100%;
+	/*Scalable padding on top of links in nav bar*/
+	padding-top: 0.75%;
+	/*Show the over flow, in case screen resize leads to this*/
+	overflow: visible;
+}
+
+label.logo img {
+	/*Line height of nav bar*/
+	line-height: 80px;
+	/*Left and right Desktop site logo padding of 100px*/
+	padding: 0 100px;
+	height: auto;
+	width: 110%;
+}
+
+.logo {
+	/*Desktop site logo container.*/
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+}
+
+
+/*Change the background color of desktop drop down items on hover.*/
+
+.desktopDropdown li:hover,
+.desktopDropdownMembers li:hover,
+.desktopDropdownContact li:hover {
+	background-color: #A50303;
+}
+
+
+/*Hide the Submenus up until the screenwidth changes for Tablet or Mobile.*/
+
+.contactMenu,
+.MembersMenu,
+.orderMenu {
+	display: none;
+}
+
+
+/*Div Container for the desktop site menu links*/
+
+.container {
+	/*Does not add line break after*/
+	display: inline-block;
+	overflow: auto;
+	vertical-align: middle;
+	/*Other 30% is the site logo*/
+	width: 70%;
+	overflow: visible;
+}
+
+.MenuUL {
+	/*Desktop menu ul*/
+	/*top and bottom margins/ paddings are respected*/
+	display: inline-block;
+	width: 100%
+}
+
+.MenuUL li a {
+	float: left;
+	padding: 12px;
+	color: black;
+	text-decoration: none;
+	/*Scalable font size for huge browser windows.*/
+	font-size: 1.38348671875vw;
+	width: 16%;
+	/* Four links of equal widths */
+	text-align: center;
+}
+
+.checkbtn {
+	/*Styled checkbox icon that when clicked will show
+  the mobile menu pullout*/
+	font-size: 30px;
+	color: black;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	/*Hidden by default on the desktop site.*/
+	display: none;
+}
+
+#check {
+	/*Hiding the actual html check element with id*/
+	display: none;
+}
+
+
+/*Desktop nav dropdown arrow styling*/
+
+.navArrowDown {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+}
+
+
+/*DESKTOP DROP DOWN SUBMENUs*/
+
+.desktopDropdown,
+.desktopDropdownMembers,
+.desktopDropdownContact {
+	display: none;
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+	padding-top: 0.5%;
+}
+
+
+/*This part is interesting because although it is considered
+bad practise to use !important. It is still valid syntax.*/
+
+
+/*I needed to over write previous styles as I am reusing these
+elements for the mobile menus.*/
+
+.desktopDropdown a,
+.desktopDropdownMembers a,
+.desktopDropdownContact a {
+	/*Overwrite styling for evenly spaced nav bar*/
+	float: none !important;
+	width: auto !important;
+	color: white;
+	text-decoration: none;
+	display: block;
+	/*Reset Padding for these items, menu li a s*/
+	padding: 8px !important;
+	/*Decided to go against design spec and use 14pt text style instead h6*/
+	font-size: 16pt !important;
+}
+
+
+/*Overwrite size of dropdown buttons li*/
+
+.desktopDropdown li,
+.desktopDropdownMembers li,
+.desktopDropdownContact li {
+	line-height: 60px;
+	width: 158px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #212121;
+}
+
+
+/*changing the text color of the links to white.*/
+
+.desktopDropdown li a,
+.desktopDropdownMembers li a,
+.desktopDropdownContact li a {
+	color: white;
+}
+
+
+/*Slick Jquery libraries*/
+
+
+/*Styling for the Slick Image carousel.*/
+
+.mySlick {
+	margin: 0 auto;
+	margin-top: min(100px);
+	margin-top: 6%;
+	width: 40%;
+	color: #333;
+	border-radius: 20px;
+}
+
+
+/*Slick individual slide styling*/
+
+.slick-slide {
+	text-align: center;
+	color: #419be0;
+	display: table;
+	border-radius: 20px;
+}
+
+.single-item img {
+	display: table-cell;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.control-c {
+	width: 30px;
+	height: 30px;
+}
+
+
+/*Homepage header and order button.*/
+
+.welcomeHome {
+	display: inline-block;
+}
+
+.welcomeHomeDivider {
+	text-align: center;
+}
+
+
+/*Styled order button for the homepage*/
+
+.homeOrderNowButton {
+	background: url('images/orderButton.png') no-repeat;
+	border: none;
+	cursor: pointer;
+	padding: 19px 48px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	margin: auto;
+}
+
+
+/*Home page 4 flexbox images displayed.*/
+
+#homeGallery {
+	display: flex;
+	justify-content: center;
+	/* align horizontal */
+	align-items: center;
+	margin-top: 3%;
+}
+
+
+/*Sizing for th above images in the container.*/
+
+#homeGallery img {
+	width: 220px;
+	height: 200px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+
+/*Booking Form styling*/
+
+#bookingFormContainer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 50%;
+	height: 95%;
+	border-radius: 20px;
+	min-height: 600px;
+	min-width: 300px;
+	font-size: 1.9676255555555557vw;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.1)
+}
+
+
+/*Input styling and form element styling.*/
+
+#bookingFormContainer input,
+#bookingTypeSelection,
+#timeslotContainer select {
+	width: 80%;
+	margin-top: 30px;
+	height: 5vh;
+	min-height: 40px;
+	font-size: 1.5vw;
+	border-radius: 20px;
+	border-style: solid;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(196, 196, 196, 0.7)
+}
+
+
+/*Hide the time slots until a date is selcted*/
+
+#timeslotContainer,
+#otherBooking {
+	display: none;
+}
+
+
+/*For both the login form on the members login Portal
+and the booking form on bookings page, add padding to
+top to space it out. Variable scaling.*/
+
+#saveForm,
+#loginForm,
+#createAccountForm {
+	padding-top: 3%;
+}
+
+
+/*SUbmit button styling over ride. Also overwriting
+the styles already set on the login and create account
+buttons on the members portal.
+*/
+
+#saveButton,
+#loginButton,
+#createAccountButton,
+#submitAccount {
+	width: 35%!important;
+	background-color: #A50303 !important;
+	border-style: none !important;
+	border-radius: 3px !important;
+	color: white !important;
+}
+
+
+/*Hide the  mobile sub menus by default with
+ display property*/
+
+.orderMenuContainer,
+.contactMenuContainer,
+.membersMenuContainer {
+	display: none;
+}
+
+
+/*Media queries for mobile resizing.
+This is the tablet width*/
+
+@media only screen and (max-width: 1273px) {
+	/*For the Mobile submenu styling.*/
+	.orderMenuContainer,
+	.contactMenuContainer,
+	.membersMenuContainer {
+		/*Fixed positioning.*/
+		position: fixed;
+		width: 85%;
+		/*Scaled height*/
+		height: 100vh;
+		background: #DFDEDE;
+		/*top 80px to still see site logo*/
+		top: 80px;
+		/*Hide the menu off screen for animation in.*/
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+		/*High z index to bring to front layer.*/
+		z-index: 1000;
+		padding-top: 1.5rem;
+		vertical-align: middle;
+		overflow: visible;
+		float: right;
+		margin-right: 20px;
+	}
+	/*Unordered List Mobile sub menu styling.*/
+	.orderMenu,
+	.contactMenu,
+	.membersMenu {
+		display: inline-block;
+		width: 100%;
+		padding-top: 30px;
+	}
+	/*setting line height for the li's contained in the above.*/
+	.orderMenu li,
+	.contactMenu li,
+	.membersMenu li {
+		display: block;
+		line-height: 30px;
+	}
+	/*Styling the actual <a> links for the mobile Submenus*/
+	/*The mobile sub menu's replace the Desktop dropdowns.*/
+	.orderMenu li a,
+	.contactMenu li a,
+	.membersMenu li a {
+		float: none;
+		line-height: 60px;
+		width: 100%;
+		display: block;
+		text-align: center;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+	}
+	/*Making mini Icons go to bottom of mobile scren as per design spec*/
+	/*Mini Icons being Uber eats, translation and the darkmode icon.*/
+	.homepage .miniIcons {
+		bottom: 0;
+	}
+	/*If on any page that isnt index.html then hide the mini icons.*/
+	.about .miniIcons,
+	.bookings .miniIcons,
+	.members .miniIcons {
+		display: none;
+	}
+	/*Scale the fonts for mobile devices.*/
+	h1 {
+		font-size: 30pt;
+	}
+	.about h6 {
+		font-size: 10pt;
+	}
+	/*Scale the booking form fonts for Mobile.*/
+	#bookingFormContainer {
+		font-size: 16pt;
+	}
+	#bookingFormContainer input,
+	#bookingTypeSelection {
+		height: 40px;
+		font-size: 14pt;
+	}
+	/*Make the Carousel images lower down on page for mobile.*/
+	.mySlick {
+		margin-top: 15%;
+	}
+	/*Hide Home gallery for mobile site*/
+	#homeGallery {
+		display: none;
+	}
+	/*Center the sites logo in the middle of nav bar for mobile*/
+	.logo {
+		height: 195px;
+		width: 400px;
+		margin: 0 auto;
+		margin-top: 20px;
+		display: block;
+		position: absolute;
+		left: calc((100% - 400px) / 2);
+		z-index: -100000;
+	}
+	/*Hide the desktop logo after resize and show the mobile logo.*/
+	.checkbtn {
+		display: block;
+	}
+	/*Hide dropdown arrows for mobile menu*/
+	.navArrowDown {
+		display: none;
+	}
+	/*Add padding between back button and links in mobile menu.*/
+	.container {
+		padding-top: 1.5rem;
+	}
+	.container {
+		/*Main mobile menu div background styling.*/
+		position: fixed;
+		width: 85%;
+		height: 100vh;
+		background: #DFDEDE;
+		top: 80px;
+		/*hidden off page by default*/
+		left: -100%;
+		text-align: center;
+		/*Slow pullout transition when check button clicked*/
+		transition: all .5s;
+		z-index: 999;
+	}
+	.MenuUL li {
+		display: block;
+		line-height: 30px;
+	}
+	.MenuUL li a {
+		float: none;
+		width: 100%;
+		display: block;
+		text-align: center;
+		font-size: 20px;
+		color: black;
+	}
+	/*Open the Mobile Menu divs sibling elements when Styled
+  checkbox has checked property.*/
+	#check:checked~div {
+		left: 0;
+	}
+	/*Adjust carousel width for mobile*/
+	.mySlick {
+		width: 60%;
+	}
+	/*For mobile screen change h1 headings= to h5*/
+	h1 {
+		font-size: 25pt;
+	}
+	h4{
+		font-size: 14pt;
+	}
+}
+
+
+/*Even smaller mobile resizing*/
+
+@media only screen and (max-width: 500px) {
+	/*SLightly change the proportions of the site logo in
+  the menu nav var for screen sizes < 500px;*/
+	.logo {
+		height: 195px;
+		width: 300px;
+		margin: 0 auto;
+		margin-top: 20px;
+		left: calc((100% - 300px) / 2);
+	}
+}
+
+
+/*Mobile Back button*/
+
+.backButtonMobile {
+	float: left;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	cursor: pointer;
+}
+
+
+/*able to see back opacity go dim on hover event.*/
+
+.backButtonMobile:hover {
+	opacity: 0.5;
+}
+
+
+/*Icons for uber eats, translation and night mode*/
+
+.uberEats {
+	width: 77px;
+	height: 48px;
+}
+
+.translation {
+	width: 64.5px;
+	height: 16px;
+	margin-bottom: 12px;
+}
+
+.miniIcons {
+	right: 0;
+	margin-right: 20px;
+	position: absolute;
+	z-index: 0;
+	min-width: 190px;
+	margin-top: 3%;
+}
+
+
+.aboutUs,
+.aboutUsText {
+	padding-top: 6%;
+}
+
+
+.carouselImages {
+	height: 357px;
+}
+
+.single-item-parent {
+	width: 70%;
+	/*Remove parent padding but retain it for the slider on homescreen*/
+	margin: 0 auto;
+}
+
+
+/*Scale down login icon on members portal page.*/
+.membersLoginImage {
+	margin: 0 auto;
+	padding-top: 3%;
+}
+
+
+/*Align the text of the contact page.*/
+.socialsContainer, .contactDetailsContainer{
+	text-align: center;
+	margin-top: 1%;
+}
+
+/*Container styling for the div containing contact info.*/
+.contactDetailsContainer{
+	width:40%;
+	min-width: 250px;
+	height:20%;
+	margin: 0 auto;
+	margin-top: 3%;
+	border-radius: 50px;
+	background-color: #C4C4C4;
+	background: rgba(0, 0, 0, 0.08);
+	padding: 10px 0 10px 0;
+}
